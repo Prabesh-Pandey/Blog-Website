@@ -2,10 +2,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getUser, logout } from '../auth';
 
-// Navbar will show auth links and allow logout
 
 function Navbar() {
-  // no mobile toggle needed; remove unused icon
+  
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 

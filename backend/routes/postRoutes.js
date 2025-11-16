@@ -3,9 +3,6 @@ const router = express.Router();
 const Post = require("../models/post.js");
 const auth = require('../middleware/auth');
 
-// Simple CRUD and interaction routes for posts.
-// Kept intentionally explicit so a new developer can follow the flow.
-// TODO (intern): add request validation (Joi) and per-route tests.
 
 // GET all posts
 router.get("/", async (req, res) => {

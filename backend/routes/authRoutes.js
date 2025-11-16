@@ -4,9 +4,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
-// NOTE: This file contains the auth endpoints. It's intentionally kept small and readable so
-// new contributors (e.g. interns) can understand how signup/login work.
-// TODO: add unit tests and rate limiting in a later iteration.
 
 // POST /auth/signup
 // Accepts: { password }

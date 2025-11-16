@@ -87,7 +87,7 @@ function Home() {
 
               {openComments[post._id] && (
                 <div style={{ marginTop: 12 }}>
-                  {/* Use PostComments component for consistent behavior */}
+                  
                   <PostComments post={post} onUpdate={(updated) => setPosts(prev => prev.map(p => p._id === updated._id ? updated : p))} />
                 </div>
               )}

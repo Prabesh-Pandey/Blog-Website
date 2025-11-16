@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-// Load .env early
+
 require("dotenv").config();
 
 const app = express();
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Minimal startup checks to help new developers
+
 if (!process.env.MONGO_URI) {
     console.warn('WARNING: MONGO_URI not set. Use backend/.env or set env var MONGO_URI.');
 }
@@ -21,10 +21,10 @@ mongoose.connect(process.env.MONGO_URI, { autoIndex: true })
     .then(() => console.log("MongoDB connected"))
     .catch(err => {
         console.error('MongoDB connection error:', err && err.message ? err.message : err);
-        // don't crash immediately in case env misconfigured; allow process to continue for local dev
+        
     });
 
-// Small migration helper: drop legacy unique index on `email` if it exists
+
 mongoose.connection.on('connected', async () => {
     try {
         const db = mongoose.connection.db;
@@ -47,13 +47,13 @@ mongoose.connection.on('connected', async () => {
     }
 });
 
-// Routes (kept simple for readability)
+// Routes 
 const postRoutes = require("./routes/postRoutes");
 app.use("/posts", postRoutes);
 const authRoutes = require("./routes/authRoutes");
 app.use("/auth", authRoutes);
 
-// Graceful shutdown (helpful during local development)
+// Graceful shutdown 
 const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

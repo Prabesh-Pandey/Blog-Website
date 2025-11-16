@@ -1,38 +1,15 @@
-# Simple Blog (Intern Edition)
+(# Project Screenshots)
 
-This is a small full-stack blog project (Node/Express + MongoDB backend, React frontend) created as a learning project.
+Below are screenshots from the project UI.
 
-Goals of this change-set
-- Make the project easier to run and understand.
-- Add small, human-friendly notes and configuration so a new developer (an intern!) can pick it up.
+![Screenshot 1](<./ss/Screenshot (4).png>)
 
-Quick start (backend)
+![Screenshot 2](<./ss/Screenshot (5).png>)
 
-1. Copy `backend/.env.example` to `backend/.env` and set your `MONGO_URI` and `JWT_SECRET`.
-2. Install backend deps and run:
+![Screenshot 3](<./ss/Screenshot (6).png>)
 
-```powershell
-cd backend
-npm install
-npm run dev
-```
+![Screenshot 4](<./ss/Screenshot (7).png>)
 
-Quick start (frontend)
+![Screenshot 5](<./ss/Screenshot (8).png>)
 
-```powershell
-cd frontend
-npm install
-npm run dev
-```
-
-Notes and conventions
-- The backend uses JWT for simple auth and MongoDB for persistence.
-- The frontend stores a token in `localStorage` and the API client attaches it on requests.
-- This repo intentionally keeps things small and readable — it's suitable for teaching and quick iteration.
-
-Intern TODOs (small starter tasks)
-- Add unit tests for backend route handlers.
-- Add client-side route guards and improve form validation UI.
-- Add a production-ready build and process for environment variables.
-
-If anything is unclear, open an issue or ping the maintainer — this repo is intentionally simple.
+![Screenshot 6](<./ss/Screenshot (9).png>)
